@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'home_screen.dart';
 import 'login_screen.dart';
 
@@ -20,12 +21,15 @@ class _SplashScreenState extends State<SplashScreen> {
       if (FirebaseAuth.instance.currentUser != null) {
         log('\nUser: ${FirebaseAuth.instance.currentUser}');
 
+        // Get.offAll(const HomeScreen());
+
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
               builder: (context) => const HomeScreen(),
             ));
       } else {
+        // Get.offAll(const LoginScreen());
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(

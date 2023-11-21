@@ -41,9 +41,34 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Google Sign-in Section -->
+	<key>CFBundleURLTypes</key>
+	<array>
+	<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>				
+					<string>com.googleusercontent.apps.288842837392-sgib97u6439i4jte3bo19u00fh663euu</string>
+			</array>
+	</dict>
+	</plist>
+
+	<!-- Permissions for picking image from gallery or taking image from camera-->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App requires access to the photo library for picking pictures.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App requires access to the camera for taking pictures.</string>
+
+	<!--For Storing Image into Gallery-->
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires read and write access to the photo library.</string>
+
 </dict>
-</plist>
+</plist>	
